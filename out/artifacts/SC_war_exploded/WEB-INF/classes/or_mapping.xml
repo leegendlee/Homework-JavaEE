@@ -1,0 +1,37 @@
+<OR-Mapping>
+    <jdbc>
+        <property>
+            <name>driver_class</name>
+            <value>com.mysql.jdbc.Driver</value>
+        </property>
+        <property>
+            <name>url_path</name>
+            <value>jdbc:mysql://localhost:3306/j2ee?useSSL=false</value>
+        </property>
+        <property>
+            <name>db_username</name>
+            <value>root</value>
+        </property>
+        <property>
+            <name>db_password</name>
+            <value></value>
+        </property>
+    </jdbc>
+    <class>
+        <name>UserBean</name>
+        <table>users</table>
+        <id>UserId</id>
+        <property>
+            <name>UserName</name>
+            <column>user_name</column>
+            <type>String</type>
+            <lazy>false</lazy>
+        </property>
+        <property>
+            <name>UserPass</name>
+            <column>user_password</column>
+            <type>String</type>
+            <lazy>true</lazy>
+        </property>
+    </class>
+</OR-Mapping>

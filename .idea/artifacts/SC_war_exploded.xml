@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SC:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SC_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="SC/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SC" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../SimpleController/out/artifacts/simple_controller/simple-controller.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../dom4j-2.1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../mysql-connector-java-5.1.45-bin.jar" />
+          <element id="library" level="project" name="SimpleController" />
+          <element id="library" level="project" name="cglib-nodep-3.2.5" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

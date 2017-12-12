@@ -1,0 +1,26 @@
+<html>
+    <head>a viewer in MVC</head>
+    <body>
+        <form>
+            <name>logoutForm</name>
+            <action>logout.action</action>
+            <method>post</method>
+            <input>
+                <textView>
+                    <name>userName</name>
+                    <label>Login Name:</label>
+                    <value>Water</value>
+                </textView>
+                <textView>
+                    <name>userAge</name>
+                    <label>Age:</label>
+                    <value>30</value>
+                </textView>
+            </input>
+            <buttonView>
+                <name>logoutButton</name>
+                <label>Logout</label>
+            </buttonView>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SC/SC.iml" filepath="$PROJECT_DIR$/SC/SC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UseSC.iml" filepath="$PROJECT_DIR$/.idea/modules/UseSC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UseSC_main.iml" filepath="$PROJECT_DIR$/.idea/modules/UseSC_main.iml" group="UseSC" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UseSC_test.iml" filepath="$PROJECT_DIR$/.idea/modules/UseSC_test.iml" group="UseSC" />
+    </modules>
+  </component>
+</project>
