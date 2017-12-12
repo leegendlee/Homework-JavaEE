@@ -2,94 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05648bb0-562f-45b6-897a-5a1181ea3d3a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/action/BaseAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/action/LoginAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/action/RegisterAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/action/SimpleController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/bean/UserBean.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/dao/BaseDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/dao/Configuration.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/dao/Conversation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/dao/UserDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/interceptor/InterceptorProxy.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/interceptor/LogInterceptor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/lib/SimpleController.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/lib/cglib-nodep-3.2.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/lib/dom4j-2.1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.45-bin.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/action/BaseAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/action/LoginAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/action/RegisterAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/action/SimpleController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/bean/UserBean.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/dao/BaseDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/dao/Configuration.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/dao/Conversation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/dao/UserDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/interceptor/InterceptorProxy.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/interceptor/LogInterceptor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/SC_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SimpleController.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/cglib_nodep_3_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/UseSC.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/UseSC_main.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/UseSC_test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/SC.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/controller.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/di.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/or_mapping.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/action/BaseAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/action/LoginAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/action/RegisterAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/bean/UserBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/dao/Configuration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/dao/Conversation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/dao/UserDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/interceptor/InterceptorProxy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/interceptor/LogInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/web/WEB-INF/log.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/web/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/web/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/web/pages/login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/web/pages/success_view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/web/pages/success_view.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/web/pages/success_view.xsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/controller.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/di.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/or_mapping.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/log.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/pages/login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/pages/success_view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/pages/success_view.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/pages/success_view.xsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/controller.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/di.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SC/or_mapping.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/y" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/y.pub" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -116,14 +30,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SimpleController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="86" column="21" lean-forward="true" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+            <state relative-caret-position="351">
+              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -469,11 +396,12 @@
         <option value="$PROJECT_DIR$/SC/src/water/ustc/action/BaseAction.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/action/LoginAction.java" />
         <option value="$PROJECT_DIR$/SC/src/controller.xml" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/interceptor/LogInterceptor.java" />
         <option value="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/log.xml" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/interceptor/InterceptorProxy.java" />
         <option value="$PROJECT_DIR$/SC/web/pages/login.jsp" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1132,12 +1060,20 @@
       <workItem from="1512713056194" duration="491000" />
       <workItem from="1512834676534" duration="1494000" />
       <workItem from="1512986783279" duration="21479000" />
-      <workItem from="1513064148208" duration="6157000" />
+      <workItem from="1513064148208" duration="6497000" />
     </task>
+    <task id="LOCAL-00001" summary="[Leegend]First Push">
+      <created>1513094058450</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1513094058451</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91098000" />
+    <option name="totallyTimeSpent" value="91438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1145,7 +1081,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1164,7 +1100,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19709209" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1184,6 +1120,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[Leegend]First Push" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Leegend]First Push" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="2" />
@@ -1195,13 +1135,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SC/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/SC/lib/simple-controller.jar!/sc/ustc/controller/SimpleController.class" />
     <entry file="file://$PROJECT_DIR$/SC/src/controller.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1381,6 +1314,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1388,6 +1322,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1395,6 +1330,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1410,6 +1346,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1434,6 +1371,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1533,11 +1471,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="86" column="21" lean-forward="true" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+        <state relative-caret-position="351">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
