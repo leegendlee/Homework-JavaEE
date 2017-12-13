@@ -74,20 +74,18 @@ public class BaseAction {
 
                 String pattern = ".*_view\\.xml";
                 String value = result.attributeValue("value");
-                if (Pattern.matches(pattern, value)) {
-
+                if(Pattern.matches(pattern, value)) {
+                    String prefix = value.substring(0, value.lastIndexOf("."));
                     TransformerFactory factory = TransformerFactory.newInstance();
-
-                    Source xslPage = new StreamSource(req.getServletContext().getRealPath("/pages/success_view.xsl"));
+                    Source xslPage = new StreamSource(req.getServletContext().getRealPath("/" + prefix + ".xsl"));
                     Transformer transformer = factory.newTransformer(xslPage);
-
                     File xmlPage = new File(req.getServletContext().getRealPath("/" + value));
-                    File htmlPage = new File(req.getServletContext().getRealPath("/pages/success_view.html"));
+
+                    File htmlPage = new File(req.getServletContext().getRealPath("/" + prefix + ".html"));
                     Source source = new StreamSource(xmlPage);
                     Result result1 = new StreamResult(htmlPage);
-
                     transformer.transform(source, result1);
-                    req.getRequestDispatcher("/pages/success_view.html").forward(req, res);
+                    req.getRequestDispatcher(prefix + ".html").forward(req, res);
                 } else {
                     RequestDispatcher dispatcher = req.getRequestDispatcher(value);
                     dispatcher.forward(req, res);
