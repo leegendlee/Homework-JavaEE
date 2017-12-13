@@ -30,6 +30,5 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="SimpleController" level="project" />
-    <orderEntry type="library" name="cglib-nodep-3.2.5" level="project" />
   </component>
 </module>

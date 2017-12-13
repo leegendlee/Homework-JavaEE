@@ -5,6 +5,7 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
+import sc.ustc.interceptor.InterfaceInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
@@ -16,16 +17,17 @@ import java.util.Date;
 /**
  * Created by leegend on 2017/12/4.
  */
-public class LogInterceptor {
+public class LogInterceptor implements InterfaceInterceptor {
     private Element actionLog;
     private Document documentLog;
 
     private Element action;
     private HttpServletRequest req;
 
-    public void init(Element action, HttpServletRequest req) throws DocumentException {
-        this.action = action;
-        this.req = req;
+    @Override
+    public void init(Element element, HttpServletRequest httpServletRequest) throws DocumentException {
+        this.action = element;
+        this.req = httpServletRequest;
 
         File logXml = new File(this.req.getServletContext().getRealPath("/WEB-INF/log.xml"));
         SAXReader saxReaderLog = new SAXReader();
@@ -43,6 +45,7 @@ public class LogInterceptor {
         actionLog.element("result").setText("failure");
     }
 
+    @Override
     public void write() throws IOException {
         FileWriter fileWriter = new FileWriter(this.req.getServletContext().getRealPath("/WEB-INF/log.xml"));
         XMLWriter xmlWriter = new XMLWriter(fileWriter);

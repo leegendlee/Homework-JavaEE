@@ -12,7 +12,6 @@
           <element id="file-copy" path="$PROJECT_DIR$/../dom4j-2.1.0.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../mysql-connector-java-5.1.45-bin.jar" />
           <element id="library" level="project" name="SimpleController" />
-          <element id="library" level="project" name="cglib-nodep-3.2.5" />
         </element>
       </element>
     </root>

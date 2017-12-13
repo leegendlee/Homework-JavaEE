@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <log>
+
     <action>
         <name>login</name>
-        <s-time>2017-12-12 21:55:59</s-time>
-        <e-time>2017-12-12 21:56:00</e-time>
+        <s-time>2017-12-13 12:38:57</s-time>
+        <e-time>2017-12-13 12:38:57</e-time>
         <result>success</result>
     </action>
     <action>
         <name>login</name>
-        <s-time>2017-12-12 21:56:14</s-time>
-        <e-time>2017-12-12 21:56:14</e-time>
-        <result>success</result>
-    </action>
-    <action>
-        <name>login</name>
-        <s-time>2017-12-12 21:57:45</s-time>
-        <e-time>2017-12-12 21:57:45</e-time>
+        <s-time>2017-12-13 12:39:01</s-time>
+        <e-time>2017-12-13 12:39:01</e-time>
         <result>failure</result>
-    </action>
-    <action>
-        <name>login</name>
-        <s-time>2017-12-12 21:57:57</s-time>
-        <e-time>2017-12-12 21:57:57</e-time>
-        <result>success</result>
     </action>
 </log>

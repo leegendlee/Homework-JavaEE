@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>老顽童-老峻峻</title>
   </head>
   <body>
-  <a href=""></a>
+  <a href="/login.sc">登录</a>
+  <a href="">注册(作业不需要，暂时未写)</a>
   </body>
 </html>
