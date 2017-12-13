@@ -20,11 +20,18 @@ import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 import water.ustc.interceptor.InterceptorProxy;
 
 public class SimpleController extends HttpServlet {
+    public static String basePath = null;
+
     public SimpleController() {
+    }
+
+    private void initAttrs() {
+        basePath = getServletContext().getRealPath("/");
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -36,28 +43,39 @@ public class SimpleController extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        this.doPost(req, res);
+//        String url = req.getRequestURI();
+//
+//        System.out.println(url);
+//        if (!Pattern.matches(".*\\.sc", url) && !Pattern.matches(".*\\.html", url)) {
+//            System.out.println(false);
+//            this.doPost(req, res);
+//
+//            return;
+//        }
     }
 
     public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        if (basePath == null) {
+            this.initAttrs();
+        }
+
         try {
             this.parse(req, res);
-//            this.doGet(req, res);
         } catch (DocumentException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
             e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (TransformerException e) {
             e.printStackTrace();
         } catch (IntrospectionException e) {
-            e.printStackTrace();
-        } catch (TransformerException e) {
             e.printStackTrace();
         }
     }
@@ -73,6 +91,7 @@ public class SimpleController extends HttpServlet {
 
         Element controller = rootController.element("controller");
 
+        Boolean identify = false;
         for (Iterator j = controller.elementIterator("action"); j.hasNext(); ) {
             Element action = (Element) j.next();
 
@@ -89,17 +108,15 @@ public class SimpleController extends HttpServlet {
 
                 BaseAction baseAction = (BaseAction) interceptorProxy.getInstance(new BaseAction());
                 baseAction.newAction(action, req, res);
+
+                identify = true;
+                break;
             }
-//            else {
-//                PrintWriter writer = res.getWriter();
-//                writer.write("Cannot Identify");
-//
-//            }
         }
 
-    }
-
-    private void intercept() {
-
+        if (!identify) {
+            PrintWriter writer = res.getWriter();
+            writer.write("Cannot Identify");
+        }
     }
 }
