@@ -12,13 +12,13 @@ import java.util.*;
 /**
  * Created by leegend on 2017/12/11.
  */
-public class InterceptorProxy implements MethodInterceptor {
+public class ProxyInterceptor implements MethodInterceptor {
     private List<Element> interceptors = new ArrayList<Element>();
     private Element action;
     private HttpServletRequest req;
     private Map<String, Object> queueInterceptors = new HashMap<String, Object>();
 
-    public InterceptorProxy(Element action, HttpServletRequest req) {
+    public ProxyInterceptor(Element action, HttpServletRequest req) {
         this.action = action;
         this.req = req;
     }

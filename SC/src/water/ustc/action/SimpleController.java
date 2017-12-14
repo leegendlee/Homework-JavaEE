@@ -8,6 +8,8 @@ import java.beans.IntrospectionException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,19 +20,27 @@ import org.dom4j.io.SAXReader;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
+import java.text.MessageFormat;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
-import water.ustc.interceptor.InterceptorProxy;
+import water.ustc.interceptor.ProxyInterceptor;
 
 public class SimpleController extends HttpServlet {
-    public static String basePath = null;
+    public static File controllerXml;
+    public static String basePath = "";
+    public static Element action = null;
+    public static ProxyInterceptor proxyInterceptor = null;
+    public static String uri = "";
+    public static Map<String, String> params = new HashMap<String, String>();
 
     public SimpleController() {
     }
 
-    private void initAttrs() {
+    private void initAttrs(HttpServletRequest req) {
         basePath = getServletContext().getRealPath("/");
     }
 
@@ -43,24 +53,58 @@ public class SimpleController extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-//        String url = req.getRequestURI();
-//
-//        System.out.println(url);
-//        if (!Pattern.matches(".*\\.sc", url) && !Pattern.matches(".*\\.html", url)) {
-//            System.out.println(false);
-//            this.doPost(req, res);
-//
-//            return;
-//        }
+        try {
+            BaseAction baseAction = (BaseAction) proxyInterceptor.getInstance(new BaseAction());
+            baseAction.newAction(action, req, res);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (TransformerException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (IntrospectionException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        if (basePath == null) {
-            this.initAttrs();
+    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+        HttpServletRequest request = (HttpServletRequest) req;
+        HttpServletResponse response = (HttpServletResponse) res;
+
+        uri = request.getRequestURI();
+
+        if (controllerXml == null) {
+            controllerXml = new File(getServletContext().getRealPath("/WEB-INF/classes/controller.xml"));
         }
 
+        if (basePath.isEmpty()) {
+            this.initAttrs(request);
+        }
+
+
+        if (params.isEmpty()) {
+//                params = request.getParameterMap();
+        }
+
+        System.out.println("service");
         try {
-            this.parse(req, res);
+            this.parse(request, response);
+            this.intercept(request, response);
+
+            String method = request.getMethod();
+            if (method.equals("GET")) {
+                this.doGet(request, response);
+            } else if (method.equals("POST")) {
+                this.doPost(request, response);
+            }
         } catch (DocumentException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -81,42 +125,51 @@ public class SimpleController extends HttpServlet {
     }
 
     private void parse(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException, DocumentException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, TransformerException, IntrospectionException {
-        String url = req.getRequestURI();
-        String reqAction = url.substring(url.indexOf("/") + 1, url.lastIndexOf("."));
-
-        File inputXml = new File(getServletContext().getRealPath("/WEB-INF/classes/controller.xml"));
         SAXReader saxReader = new SAXReader();
-        Document document = saxReader.read(inputXml);
+        Document document = saxReader.read(controllerXml);
         Element rootController = document.getRootElement();
 
         Element controller = rootController.element("controller");
 
+        String reqAction = this.calcActionName(uri);
         Boolean identify = false;
-        for (Iterator j = controller.elementIterator("action"); j.hasNext(); ) {
-            Element action = (Element) j.next();
 
-            if (Objects.equals(action.attributeValue("name"), reqAction)) {
-                InterceptorProxy interceptorProxy = new InterceptorProxy(action, req);
+        for (Iterator j = controller.elementIterator("action"); j.hasNext(); ) {
+            Element elementAction = (Element) j.next();
+
+            if (Objects.equals(elementAction.attributeValue("name"), reqAction)) {
+                action = elementAction;
+                proxyInterceptor = new ProxyInterceptor(action, req);
 
                 for (Element interceptorRef : action.elements("interceptor-ref")) {
                     for (Element interceptor : rootController.elements("interceptor")) {
                         if (interceptorRef.attributeValue("name").equals(interceptor.attributeValue("name"))) {
-                            interceptorProxy.addInterceptors(interceptor);
+                            proxyInterceptor.addInterceptors(interceptor);
                         }
                     }
                 }
-
-                BaseAction baseAction = (BaseAction) interceptorProxy.getInstance(new BaseAction());
-                baseAction.newAction(action, req, res);
 
                 identify = true;
                 break;
             }
         }
 
+        System.out.println(identify);
         if (!identify) {
             PrintWriter writer = res.getWriter();
             writer.write("Cannot Identify");
         }
+    }
+
+    private void intercept(HttpServletRequest req, HttpServletResponse res) throws TransformerException, InstantiationException, InvocationTargetException, NoSuchMethodException, IllegalAccessException, IntrospectionException, IOException, ClassNotFoundException, ServletException, DocumentException {
+        //需要适配get，post更为通用
+    }
+
+    private String calcActionName(String uri) {
+        if (!Pattern.matches(".*\\.sc.*", uri)) {
+            return "";
+        }
+
+        return uri.substring(uri.lastIndexOf("/") + 1, uri.lastIndexOf("."));
     }
 }
