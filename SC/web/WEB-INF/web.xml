@@ -9,6 +9,16 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>sc</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>*.sc</url-pattern>
     </servlet-mapping>
+
+    <filter>
+        <filter-name>baseFilter</filter-name>
+        <filter-class>water.ustc.filter.BaseFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>baseFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
 </web-app>

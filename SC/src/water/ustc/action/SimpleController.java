@@ -20,7 +20,6 @@ import org.dom4j.io.SAXReader;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
-import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -44,7 +43,8 @@ public class SimpleController extends HttpServlet {
         basePath = getServletContext().getRealPath("/");
     }
 
-    public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         res.setContentType("text/html;charset=utf-8");
         PrintWriter writer = res.getWriter();
         String origin = "<html><head><title>water.ustc.SimpleController</title>" +
@@ -52,7 +52,8 @@ public class SimpleController extends HttpServlet {
         writer.print(origin);
     }
 
-    public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         try {
             BaseAction baseAction = (BaseAction) proxyInterceptor.getInstance(new BaseAction());
             baseAction.newAction(action, req, res);
@@ -75,27 +76,27 @@ public class SimpleController extends HttpServlet {
         }
     }
 
+    @Override
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-        HttpServletRequest request = (HttpServletRequest) req;
-        HttpServletResponse response = (HttpServletResponse) res;
-
-        uri = request.getRequestURI();
-
-        if (controllerXml == null) {
-            controllerXml = new File(getServletContext().getRealPath("/WEB-INF/classes/controller.xml"));
-        }
-
-        if (basePath.isEmpty()) {
-            this.initAttrs(request);
-        }
-
-
-        if (params.isEmpty()) {
-//                params = request.getParameterMap();
-        }
-
-        System.out.println("service");
         try {
+            HttpServletRequest request = (HttpServletRequest) req;
+            HttpServletResponse response = (HttpServletResponse) res;
+
+            uri = request.getRequestURI();
+
+            if (controllerXml == null) {
+                controllerXml = new File(getServletContext().getRealPath("/WEB-INF/classes/controller.xml"));
+            }
+
+            if (basePath.isEmpty()) {
+                this.initAttrs(request);
+            }
+
+
+            if (params.isEmpty()) {
+//                params = request.getParameterMap();
+            }
+
             this.parse(request, response);
             this.intercept(request, response);
 
@@ -154,7 +155,6 @@ public class SimpleController extends HttpServlet {
             }
         }
 
-        System.out.println(identify);
         if (!identify) {
             PrintWriter writer = res.getWriter();
             writer.write("Cannot Identify");

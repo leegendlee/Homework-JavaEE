@@ -70,30 +70,30 @@ public class BaseAction {
         for (Iterator k = action.elementIterator("result"); k.hasNext(); ) {
             Element result = (Element) k.next();
             if (Objects.equals(result.attributeValue("name"), methodResult)) {
-
                 String pattern = ".*_view\\.xml";
-                String value = result.attributeValue("value");
-                if(Pattern.matches(pattern, value)) {
-                    String prefix = value.substring(0, value.lastIndexOf("."));
-                    TransformerFactory factory = TransformerFactory.newInstance();
-                    Source xslPage = new StreamSource(req.getServletContext().getRealPath("/" + prefix + ".xsl"));
-                    Transformer transformer = factory.newTransformer(xslPage);
-                    File xmlPage = new File(req.getServletContext().getRealPath("/" + value));
+                String value = "/" + result.attributeValue("value");
 
-                    File htmlPage = new File(req.getServletContext().getRealPath("/" + prefix + ".html"));
+                if (Pattern.matches(pattern, value)) {
+                    String prefix = value.substring(0, value.lastIndexOf("."));
+
+                    TransformerFactory factory = TransformerFactory.newInstance();
+                    Source xslPage = new StreamSource(req.getServletContext().getRealPath(prefix + ".xsl"));
+                    Transformer transformer = factory.newTransformer(xslPage);
+                    File xmlPage = new File(req.getServletContext().getRealPath(value));
+
+                    File htmlPage = new File(req.getServletContext().getRealPath(prefix + ".html"));
                     Source source = new StreamSource(xmlPage);
                     Result result1 = new StreamResult(htmlPage);
                     transformer.transform(source, result1);
-//                    req.getRequestDispatcher(prefix + ".html").forward(req, res);
+                    req.getRequestDispatcher(prefix + ".html").forward(req, res);
                 } else {
-//                    RequestDispatcher dispatcher = req.getRequestDispatcher(value);
-//                    dispatcher.forward(req, res);
+                    req.getRequestDispatcher(value).forward(req, res);
                 }
 
                 break;
             } else {
-//                PrintWriter writer = res.getWriter();
-//                writer.write("No Response");
+                PrintWriter writer = res.getWriter();
+                writer.write("No Result");
 
                 return null;
             }
