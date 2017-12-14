@@ -40,7 +40,7 @@ public class SimpleController extends HttpServlet {
     }
 
     private void initAttrs(HttpServletRequest req) {
-        basePath = getServletContext().getRealPath("/");
+        basePath = req.getServletContext().getRealPath("/");
     }
 
     @Override
@@ -84,14 +84,13 @@ public class SimpleController extends HttpServlet {
 
             uri = request.getRequestURI();
 
-            if (controllerXml == null) {
-                controllerXml = new File(getServletContext().getRealPath("/WEB-INF/classes/controller.xml"));
-            }
-
             if (basePath.isEmpty()) {
                 this.initAttrs(request);
             }
 
+            if (controllerXml == null) {
+                controllerXml = new File(getServletContext().getRealPath("/WEB-INF/classes/controller.xml"));
+            }
 
             if (params.isEmpty()) {
 //                params = request.getParameterMap();

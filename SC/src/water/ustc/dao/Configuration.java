@@ -4,7 +4,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
-import water.ustc.action.SimpleController;
+import sc.ustc.controller.SimpleController;
 
 import java.io.File;
 
@@ -16,6 +16,7 @@ public class Configuration {
 
     public Configuration() throws DocumentException {
         if (this.rootElement == null) {
+            System.out.println(SimpleController.basePath);
             File orMappingXml = new File(SimpleController.basePath + "/WEB-INF/classes/or_mapping.xml");
             SAXReader saxReader1 = new SAXReader();
             Document orMappingDocument = saxReader1.read(orMappingXml);
