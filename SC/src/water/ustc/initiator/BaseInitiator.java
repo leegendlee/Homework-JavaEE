@@ -37,6 +37,8 @@ public class BaseInitiator extends HttpServlet implements ServletContainerInitia
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        //此处读取加载初始化加载文件，用于注册初始器
     }
 
     private static Element setElementRoot(String relativePath) {
@@ -55,20 +57,20 @@ public class BaseInitiator extends HttpServlet implements ServletContainerInitia
         return document.getRootElement();
     }
 
-    private static void setRootPath(String rootPath) {
+    private void setRootPath(String rootPath) {
         ROOT_PATH = rootPath;
     }
 
-    private static void setControllerXmlRoot(String controllerXmlPath) {
+    private void setControllerXmlRoot(String controllerXmlPath) {
         CONTROLLER_XML_ROOT = setElementRoot(controllerXmlPath);
     }
 
-    private static void setOrMappingXmlRoot(String orMappingXmlPath) {
+    private void setOrMappingXmlRoot(String orMappingXmlPath) {
         OR_MAPPING_XML_ROOT = setElementRoot(orMappingXmlPath);
 
     }
 
-    private static void setDiXmlRoot(String diXmlPath) {
+    private void setDiXmlRoot(String diXmlPath) {
         DI_XML_ROOT = setElementRoot(diXmlPath);
     }
 

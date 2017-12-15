@@ -26,10 +26,10 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
+import water.ustc.initiator.BaseInitiator;
 import water.ustc.interceptor.ProxyInterceptor;
 
 public class SimpleController extends HttpServlet {
-    public static File controllerXml;
     public static String basePath = "";
     public static Element action = null;
     public static ProxyInterceptor proxyInterceptor = null;
@@ -57,21 +57,7 @@ public class SimpleController extends HttpServlet {
         try {
             BaseAction baseAction = (BaseAction) proxyInterceptor.getInstance(new BaseAction());
             baseAction.newAction(action, req, res);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        } catch (TransformerException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (IntrospectionException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -88,10 +74,6 @@ public class SimpleController extends HttpServlet {
                 this.initAttrs(request);
             }
 
-            if (controllerXml == null) {
-                controllerXml = new File(getServletContext().getRealPath("/WEB-INF/classes/controller.xml"));
-            }
-
             if (params.isEmpty()) {
 //                params = request.getParameterMap();
             }
@@ -105,30 +87,13 @@ public class SimpleController extends HttpServlet {
             } else if (method.equals("POST")) {
                 this.doPost(request, response);
             }
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (TransformerException e) {
-            e.printStackTrace();
-        } catch (IntrospectionException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     private void parse(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException, DocumentException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, TransformerException, IntrospectionException {
-        SAXReader saxReader = new SAXReader();
-        Document document = saxReader.read(controllerXml);
-        Element rootController = document.getRootElement();
-
+        Element rootController = BaseInitiator.getControllerXmlRoot();
         Element controller = rootController.element("controller");
 
         String reqAction = this.calcActionName(uri);

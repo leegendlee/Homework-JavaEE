@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05648bb0-562f-45b6-897a-5a1181ea3d3a" name="Default" comment="[Leegend]拦截器Map效率优化">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/dao/BaseDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/dao/BaseDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/dao/Configuration.class" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/dao/Configuration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/interceptor/LogInterceptor.class" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/classes/water/ustc/interceptor/LogInterceptor.class" />
+    <list default="true" id="05648bb0-562f-45b6-897a-5a1181ea3d3a" name="Default" comment="[Leegend]添加初始化常量注册">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/src/water/ustc/initiator/ORMappingInitiator.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SC/water/ustc/dao/Configuration.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SC/water/ustc/dao/BaseDAO.class" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/dao/BaseDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/dao/Configuration.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/dao/Configuration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/dao/Conversation.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/dao/Conversation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/log.xml" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/log.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/pages/success_view.html" afterPath="$PROJECT_DIR$/out/artifacts/SC_war_exploded/pages/success_view.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -40,52 +40,54 @@
       <file leaf-file-name="BaseDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseInitiator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="300">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1867#1868#0" expanded="true" />
-                <element signature="e#1903#1904#0" expanded="true" />
-                <element signature="e#2249#2250#0" expanded="true" />
-                <element signature="e#2304#2305#0" expanded="true" />
-                <element signature="e#2347#2348#0" expanded="true" />
-                <element signature="e#2379#2380#0" expanded="true" />
-                <element signature="e#2431#2432#0" expanded="true" />
-                <element signature="e#2473#2474#0" expanded="true" />
-                <element signature="e#2524#2525#0" expanded="true" />
-                <element signature="e#2566#2567#0" expanded="true" />
-                <element signature="e#2610#2611#0" expanded="true" />
-                <element signature="e#2644#2645#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1136#1137#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1217#1218#0" expanded="true" />
+                <element signature="e#1457#1458#0" expanded="true" />
+                <element signature="e#1489#1490#0" expanded="true" />
+                <element signature="e#1529#1530#0" expanded="true" />
+                <element signature="e#1562#1563#0" expanded="true" />
+                <element signature="e#1616#1617#0" expanded="true" />
+                <element signature="e#1654#1655#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java">
+      <file leaf-file-name="BaseInitiator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-472">
-              <caret line="91" column="34" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="600">
+              <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/listener/BaseListener.java">
+      <file leaf-file-name="Conversation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/Conversation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <folding>
+                <marker date="1513323273073" expanded="true" signature="1203:1300" ph="SELECT * FRO... missingValue" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ORMappingInitiator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/ORMappingInitiator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -425,7 +427,6 @@
         <option value="$PROJECT_DIR$/SC/src/water/ustc/bean/UserBean.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/di.xml" />
         <option value="$PROJECT_DIR$/SC/src/di.xml" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/dao/Conversation.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/action/RegisterAction.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/action/LoginAction.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/interceptor/InterceptorProxy.java" />
@@ -437,7 +438,6 @@
         <option value="$PROJECT_DIR$/SC/src/water/ustc/filter/BaseFilter.java" />
         <option value="$PROJECT_DIR$/SC/web/pages/login.jsp" />
         <option value="$PROJECT_DIR$/SC/src/controller.xml" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/dao/Configuration.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/bean/ConstantBean.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/listener/Initiator.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/interfaces/InterfaceInterceptor.java" />
@@ -445,9 +445,12 @@
         <option value="$PROJECT_DIR$/SC/src/water/ustc/listener/BaseLIistener.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/interceptor/ProxyInterceptor.java" />
         <option value="$PROJECT_DIR$/SC/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/dao/Configuration.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/dao/Conversation.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/initiator/ORMappingInitiator.java" />
       </list>
     </option>
   </component>
@@ -543,6 +546,140 @@
               <option name="myItemId" value="ustc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleController" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleController.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ustc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listener" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ustc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ustc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="interceptor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -554,15 +691,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleController" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+              <option name="myItemId" value="SC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleController.jar" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -570,7 +707,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="initiator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -580,15 +717,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleController" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+              <option name="myItemId" value="SC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleController.jar" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -596,35 +733,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseSC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleController" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleController.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseSC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseSC" />
+              <option name="myItemId" value="filter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -638,7 +747,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
+              <option name="myItemId" value="SC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ustc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -652,97 +773,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
+              <option name="myItemId" value="SC" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SC_war_exploded" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseSC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseSC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SC_war_exploded" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseSC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseSC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SC_war_exploded" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseSC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UseSC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SC_war_exploded" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="ustc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -759,7 +798,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="SimpleC&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;UserD&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/UserDAO.java&#10;Pro&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/ProxyInterceptor.java&#10;web&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml&#10;BaseA&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;BaseD&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/BaseDAO.java&#10;Con&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/Configuration.java&#10;con&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;Confi&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/Configuration.java&#10;Simple&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;Inter&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/ProxyInterceptor.java&#10;log&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/pages/login.jsp&#10;controller&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;web.xml&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml&#10;index&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/index.jsp&#10;S&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;Base&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;Log&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;B&#9;FILE&#9;jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/ServletRequest.class&#10;UserB&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/UserBean.java&#10;User&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/UserBean.java&#10;BASE&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;Simpl&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;HttpS&#9;FILE&#9;jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/http/HttpServletRequest.class&#10;Http&#9;FILE&#9;jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class&#10;inde&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/index.jsp&#10;log.&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/out/artifacts/SC_war_exploded/WEB-INF/log.xml&#10;cont&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;di&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/di.xml&#10;Login&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;Lo&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/LogInterceptor.java&#10;I&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/LogInterceptor.java&#10;c&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;Sim&#9;FILE&#9;jar:///Users/leegend/Downloads/UseSC/SC/lib/simple-controller.jar!/sc/ustc/controller/SimpleController.class&#10;web.&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml" />
+    <property name="SearchEverywhereHistoryKey" value="UserD&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/UserDAO.java&#10;Confi&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/Configuration.java&#10;or_m&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/or_mapping.xml&#10;Simpl&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;SimpleC&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;Pro&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/ProxyInterceptor.java&#10;web&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml&#10;BaseA&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;BaseD&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/BaseDAO.java&#10;Con&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/Configuration.java&#10;con&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;Simple&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;Inter&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/ProxyInterceptor.java&#10;log&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/pages/login.jsp&#10;controller&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;web.xml&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml&#10;index&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/index.jsp&#10;S&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;Base&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;Log&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;B&#9;FILE&#9;jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/ServletRequest.class&#10;UserB&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/UserBean.java&#10;User&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/UserBean.java&#10;BASE&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;HttpS&#9;FILE&#9;jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/http/HttpServletRequest.class&#10;Http&#9;FILE&#9;jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class&#10;inde&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/index.jsp&#10;log.&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/out/artifacts/SC_war_exploded/WEB-INF/log.xml&#10;cont&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;di&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/di.xml&#10;Login&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;Lo&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/LogInterceptor.java&#10;I&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/LogInterceptor.java&#10;c&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;Sim&#9;FILE&#9;jar:///Users/leegend/Downloads/UseSC/SC/lib/simple-controller.jar!/sc/ustc/controller/SimpleController.class&#10;web.&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="FullScreen" value="true" />
   </component>
@@ -1313,7 +1352,7 @@
       <workItem from="1513244467026" duration="2482000" />
       <workItem from="1513249314666" duration="3944000" />
       <workItem from="1513257626718" duration="2669000" />
-      <workItem from="1513305540840" duration="7209000" />
+      <workItem from="1513305540840" duration="10804000" />
     </task>
     <task id="LOCAL-00001" summary="[Leegend]First Push">
       <created>1513094058450</created>
@@ -1399,11 +1438,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513310702677</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[Leegend]添加初始化常量注册">
+      <created>1513319303631</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1513319303631</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129015000" />
+    <option name="totallyTimeSpent" value="132610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1431,7 +1477,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49192247" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20274636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27059773" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1461,7 +1507,8 @@
     <MESSAGE value="[Leegend]重写拦截器接口+网站项目结构" />
     <MESSAGE value="[Leegend]项目结构完善" />
     <MESSAGE value="[Leegend]拦截器Map效率优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Leegend]拦截器Map效率优化" />
+    <MESSAGE value="[Leegend]添加初始化常量注册" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Leegend]添加初始化常量注册" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1474,13 +1521,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/interceptor/ProxyInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -1648,33 +1688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/Conversation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2173#2174#0" expanded="false" />
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2251#2252#0" expanded="false" />
-            <element signature="e#2279#2280#0" expanded="false" />
-            <element signature="e#2329#2330#0" expanded="false" />
-            <element signature="e#2357#2358#0" expanded="false" />
-            <marker date="1512538482207" expanded="true" signature="1141:1236" ph="SELECT * FRO... missingValue" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/ConstantBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1771,14 +1784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/filter/BaseFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1799,22 +1804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="1666" column="26" lean-forward="true" selection-start-line="1666" selection-start-column="26" selection-end-line="1666" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/or_mapping.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1843,24 +1832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/listener/BaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-472">
-          <caret line="91" column="34" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../SimpleController/out/artifacts/SimpleController/SimpleController.jar!/org/dom4j/Document.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1877,24 +1848,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java">
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        <state relative-caret-position="260">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/listener/BaseListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/or_mapping.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/Conversation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <marker date="1513323273073" expanded="true" signature="1203:1300" ph="SELECT * FRO... missingValue" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1867#1868#0" expanded="true" />
-            <element signature="e#1903#1904#0" expanded="true" />
-            <element signature="e#2249#2250#0" expanded="true" />
-            <element signature="e#2304#2305#0" expanded="true" />
-            <element signature="e#2347#2348#0" expanded="true" />
-            <element signature="e#2379#2380#0" expanded="true" />
-            <element signature="e#2431#2432#0" expanded="true" />
-            <element signature="e#2473#2474#0" expanded="true" />
-            <element signature="e#2524#2525#0" expanded="true" />
-            <element signature="e#2566#2567#0" expanded="true" />
-            <element signature="e#2610#2611#0" expanded="true" />
-            <element signature="e#2644#2645#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
+            <element signature="e#1529#1530#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#1654#1655#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/ORMappingInitiator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
