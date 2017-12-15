@@ -40,9 +40,7 @@ public class ProxyInterceptor implements MethodInterceptor {
         if (!this.interceptors.isEmpty()) {
             for (Element interceptor : this.interceptors) {
 
-//            for (Iterator i = this.interceptors.entrySet().iterator(); i.hasNext(); ) {
-//                Map.Entry entry = (Map.Entry) i.next();
-//                Element interceptor = (Element) entry.getValue();
+//
 
                 if (!interceptor.attributeValue("name").isEmpty()) {
                     Class interceptorClass = Class.forName(interceptor.attributeValue("class"));
@@ -63,7 +61,7 @@ public class ProxyInterceptor implements MethodInterceptor {
                         }
 
                         if (!interceptor.attributeValue("afterdo").isEmpty()) {
-                            queueInterceptors.put(interceptor.attributeValue("class"), interceptorObj);
+                            queueInterceptors.put(interceptor.attributeValue(interceptor.attributeValue("afterdo")), interceptorObj);
                         }
                     }
                 }
@@ -72,23 +70,19 @@ public class ProxyInterceptor implements MethodInterceptor {
             String actionResult = (String) methodProxy.invokeSuper(o, objects);
 
             if (!this.queueInterceptors.isEmpty()) {
-                for (Element interceptor : this.interceptors) {
-                    String key = interceptor.attributeValue("class");
+                for (Iterator i = this.queueInterceptors.entrySet().iterator(); i.hasNext(); ) {
+                    Map.Entry entry = (Map.Entry) i.next();
+                    String key = (String) entry.getKey();
+                    Object interceptorObj = (Object) entry.getValue();
 
-                    if (this.queueInterceptors.containsKey((Object) key)) {
-                        Object interceptorObj = this.queueInterceptors.get(key);
-                        Class interceptorClass = Class.forName(key);
+                    Class interceptorClass = Class.forName(interceptorObj.getClass().getName());
+                    Method targetInterceptorMethod = interceptorClass.getMethod(key, String.class);
+                    targetInterceptorMethod.invoke(interceptorObj, actionResult);
 
-                        if (!interceptor.attributeValue("afterdo").isEmpty()) {
-                            Method targetInterceptorMethod = interceptorClass.getMethod(interceptor.attributeValue("afterdo"), String.class);
-                            targetInterceptorMethod.invoke(interceptorObj, actionResult);
-                        }
+                    Method writeInterceptor = interceptorClass.getMethod("finish");
+                    writeInterceptor.invoke(interceptorObj);
 
-                        Method writeInterceptor = interceptorClass.getMethod("write");
-                        writeInterceptor.invoke(interceptorObj);
-
-                        this.queueInterceptors.remove(key);
-                    }
+                    this.queueInterceptors.remove(key);
                 }
             }
         } else {
