@@ -46,7 +46,7 @@ public class ORMappingInitiator {
             }
         }
 
-        return "";
+        return null;
     }
 
     private void setDriverClass(String driverClass) {

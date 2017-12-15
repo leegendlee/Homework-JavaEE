@@ -22,8 +22,7 @@ public class UserBean {
 
     public boolean signIn(String userName, String userPass) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException, DocumentException, NoSuchMethodException, InvocationTargetException {
         UserDAO userDAO = new UserDAO(userName, userPass);
-        String search = "select * from users where user_name='" + userName + "' and user_password='" + userPass + "'";
-        UserBean returnUser = (UserBean) userDAO.query(search);
+        UserBean returnUser = (UserBean) userDAO.query();
         if (returnUser != null) {
             if (Objects.equals(returnUser.getUserPass(), userPass)) {
                 return true;

@@ -1,9 +1,7 @@
 package water.ustc.dao;
 
-import org.dom4j.DocumentException;
 import water.ustc.initiator.ORMappingInitiator;
 
-import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 
 /**
@@ -19,20 +17,28 @@ public abstract class BaseDAO {
     private Statement statement;
     private Connection conn;
 
-    public void openDBConnection() throws ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException, DocumentException {
+    public void openDBConnection() {
         this.setDriver(ORMappingInitiator.getDriverClass());
         this.setUrl(ORMappingInitiator.getUrlPath());
 
-        Class.forName(driver).newInstance();
-        conn = DriverManager.getConnection(this.url, ORMappingInitiator.getDbUsername(), ORMappingInitiator.getDbPassword());
+        try {
+            Class.forName(driver).newInstance();
+            conn = DriverManager.getConnection(this.url, ORMappingInitiator.getDbUsername(), ORMappingInitiator.getDbPassword());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         if (conn != null) {
             this.setStatement(conn);
         }
     }
 
-    public void closeDBConnection() throws SQLException {
-        conn.close();
+    public void closeDBConnection() {
+        try {
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void setUrl(String url) {
@@ -46,7 +52,7 @@ public abstract class BaseDAO {
     private void setStatement(Connection conn) {
         try {
             this.statement = conn.createStatement();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -63,12 +69,12 @@ public abstract class BaseDAO {
         CONN_LINKS = connLinks;
     }
 
+    //用id查找
+    public abstract Object query(int id) throws SQLException;
 
-    public abstract Object query(String sql) throws SQLException, ClassNotFoundException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException;
+    public abstract boolean insert(Object obj) throws SQLException;
 
-    public abstract boolean insert(String sql) throws SQLException;
+    public abstract boolean update(Object obj) throws SQLException;
 
-    public abstract boolean update(String sql) throws SQLException;
-
-    public abstract boolean delete(String sql) throws SQLException;
+    public abstract boolean delete(Object obj) throws SQLException;
 }
