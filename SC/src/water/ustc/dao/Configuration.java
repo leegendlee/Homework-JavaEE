@@ -16,7 +16,6 @@ public class Configuration {
 
     public Configuration() throws DocumentException {
         if (this.rootElement == null) {
-            System.out.println(SimpleController.basePath);
             File orMappingXml = new File(SimpleController.basePath + "/WEB-INF/classes/or_mapping.xml");
             SAXReader saxReader1 = new SAXReader();
             Document orMappingDocument = saxReader1.read(orMappingXml);

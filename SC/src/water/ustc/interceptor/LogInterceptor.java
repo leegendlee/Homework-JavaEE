@@ -5,7 +5,7 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
-import sc.ustc.interceptor.InterfaceInterceptor;
+import water.ustc.interfaces.InterfaceInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
@@ -21,32 +21,52 @@ public class LogInterceptor implements InterfaceInterceptor {
     private Element actionLog;
     private Document documentLog;
 
-    private Element action;
+    private Element action = null;
     private HttpServletRequest req;
 
     @Override
-    public void init(Element element, HttpServletRequest httpServletRequest) throws DocumentException {
-        this.action = element;
-        this.req = httpServletRequest;
+    public void init(HttpServletRequest req, Object... obj) {
+        try {
+            if (obj.length != 0) {
+                this.action = (Element) (obj[0]);
+            }
 
-        File logXml = new File(this.req.getServletContext().getRealPath("/WEB-INF/log.xml"));
-        SAXReader saxReaderLog = new SAXReader();
-        this.documentLog = saxReaderLog.read(logXml);
-        Element rootLog = documentLog.getRootElement();
+            if (this.action == null) {
+                throw new Exception("Null Action");
+            }
 
-        this.actionLog = rootLog.addElement("action");
+            this.req = req;
 
-        actionLog.addElement("name");
-        actionLog.addElement("s-time");
-        actionLog.addElement("e-time");
-        actionLog.addElement("result");
+            File logXml = new File(this.req.getServletContext().getRealPath("/WEB-INF/log.xml"));
+            SAXReader saxReaderLog = new SAXReader();
+            this.documentLog = saxReaderLog.read(logXml);
 
-        actionLog.element("name").setText(this.action.attributeValue("name"));
-        actionLog.element("result").setText("failure");
+            Element rootLog = documentLog.getRootElement();
+
+            this.actionLog = rootLog.addElement("action");
+
+            actionLog.addElement("name");
+            actionLog.addElement("s-time");
+            actionLog.addElement("e-time");
+            actionLog.addElement("result");
+
+            actionLog.element("name").setText(this.action.attributeValue("name"));
+            actionLog.element("result").setText("failure");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    public void write() throws IOException {
+    public void finish(HttpServletRequest req, Object... obj) {
+        try {
+            this.write();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void write() throws IOException {
         FileWriter fileWriter = new FileWriter(this.req.getServletContext().getRealPath("/WEB-INF/log.xml"));
         XMLWriter xmlWriter = new XMLWriter(fileWriter);
         xmlWriter.write(this.documentLog);
