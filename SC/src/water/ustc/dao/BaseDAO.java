@@ -28,6 +28,8 @@ public abstract class BaseDAO {
         if (this.conversation == null) {
             this.conversation = new Conversation();
         }
+
+        this.statement = conn.createStatement();
     }
 
     public void closeDBConnection() throws SQLException {
