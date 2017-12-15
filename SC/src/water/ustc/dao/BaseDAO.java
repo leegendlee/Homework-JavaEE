@@ -10,11 +10,11 @@ import java.sql.*;
  */
 public abstract class BaseDAO {
     protected Conversation conversation = null;
-    //为何要用driver
+    //    为何要用driver
+//    protected Driver driver;
     protected static Connection conn = null;
-    public Statement statement;
-    //    protected Driver driver;
     protected String url;
+    public Statement statement;
 
     public void openDBConnection() throws ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException, DocumentException {
         String driver = "com.mysql.jdbc.Driver";
@@ -35,8 +35,11 @@ public abstract class BaseDAO {
     }
 
     public abstract Object query(String sql) throws SQLException, ClassNotFoundException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException;
+
     public abstract boolean insert(String sql) throws SQLException;
+
     public abstract boolean update(String sql) throws SQLException;
+
     public abstract boolean delete(String sql) throws SQLException;
 
 //    public void setDriver(Driver driver) {

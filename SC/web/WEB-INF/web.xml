@@ -4,7 +4,10 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <listener>
-        <listener-class></listener-class>
+        <listener-class>water.ustc.listener.BaseListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>water.ustc.initiator.BaseInitiator</listener-class>
     </listener>
     <servlet>
         <servlet-name>sc</servlet-name>
