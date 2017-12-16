@@ -5,8 +5,9 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
-import javax.servlet.ServletContainerInitializer;
 import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import java.io.File;
@@ -15,7 +16,7 @@ import java.util.Set;
 /**
  * Created by leegend on 2017/12/15.
  */
-public class BaseInitiator extends HttpServlet implements ServletContainerInitializer {
+public class BaseInitiator extends HttpServlet implements ServletContextListener {
     private static String ROOT_PATH;
 
     private static Element CONTROLLER_XML_ROOT;
@@ -23,13 +24,13 @@ public class BaseInitiator extends HttpServlet implements ServletContainerInitia
     private static Element DI_XML_ROOT;
 
     @Override
-    public void onStartup(Set<Class<?>> set, ServletContext servletContext) throws ServletException {
-        setRootPath(getServletContext().getRealPath("/"));
+    public void contextInitialized(ServletContextEvent servletContextEvent) {
+        setRootPath(servletContextEvent.getServletContext().getRealPath("/"));
 
         try {
-            setControllerXmlRoot(ROOT_PATH + "WEB-INF/classes/controller.xml");
-            setOrMappingXmlRoot(ROOT_PATH + "WEB-INF/classes/or_mapping.xml");
-            setDiXmlRoot(ROOT_PATH + "WEB-INF/classes/di.xml");
+            setControllerXmlRoot("WEB-INF/classes/controller.xml");
+            setOrMappingXmlRoot("WEB-INF/classes/or_mapping.xml");
+            setDiXmlRoot("WEB-INF/classes/di.xml");
 
             if (CONTROLLER_XML_ROOT == null || OR_MAPPING_XML_ROOT == null || DI_XML_ROOT == null) {
                 throw new Exception("XML File Not Initiated");
@@ -38,7 +39,13 @@ public class BaseInitiator extends HttpServlet implements ServletContainerInitia
             e.printStackTrace();
         }
 
+        new ORMappingInitiator();
         //此处读取加载初始化加载文件，用于注册初始器
+    }
+
+    @Override
+    public void contextDestroyed(ServletContextEvent servletContextEvent) {
+
     }
 
     private static Element setElementRoot(String relativePath) {
@@ -74,7 +81,7 @@ public class BaseInitiator extends HttpServlet implements ServletContainerInitia
         DI_XML_ROOT = setElementRoot(diXmlPath);
     }
 
-    private static String getRootPath() {
+    public static String getRootPath() {
         return ROOT_PATH;
     }
 

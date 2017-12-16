@@ -20,18 +20,35 @@
     <class>
         <name>UserBean</name>
         <table>users</table>
-        <id>UserId</id>
+        <id>userId</id>
         <property>
-            <name>UserName</name>
+            <name>userId</name>
+            <column>id</column>
+            <type>int</type>
+            <lazy>false</lazy>
+        </property>
+        <property>
+            <name>userName</name>
             <column>user_name</column>
             <type>String</type>
             <lazy>false</lazy>
         </property>
         <property>
-            <name>UserPass</name>
+            <name>userPass</name>
             <column>user_password</column>
             <type>String</type>
             <lazy>true</lazy>
+        </property>
+    </class>
+    <class>
+        <name>RoleBean</name>
+        <table>roles</table>
+        <id>roleId</id>
+        <property>
+            <name>roleName</name>
+            <column>role_name</column>
+            <type>String</type>
+            <lazy>false</lazy>
         </property>
     </class>
 </OR-Mapping>

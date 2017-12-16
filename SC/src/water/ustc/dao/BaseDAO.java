@@ -22,7 +22,7 @@ public abstract class BaseDAO {
         this.setUrl(ORMappingInitiator.getUrlPath());
 
         try {
-            Class.forName(driver).newInstance();
+            Class.forName(this.driver).newInstance();
             conn = DriverManager.getConnection(this.url, ORMappingInitiator.getDbUsername(), ORMappingInitiator.getDbPassword());
         } catch (Exception e) {
             e.printStackTrace();

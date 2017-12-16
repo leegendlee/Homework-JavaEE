@@ -12,15 +12,9 @@ import java.sql.SQLException;
  * Created by leegend on 2017/12/5.
  */
 public class UserDAO extends BaseDAO {
-    private String userName;
-    private String userPass;
-
-    //泛型+不定数量的参数
-    public UserDAO() {
-    }
-
     @Override
     public Object query(int id) throws SQLException {
+        //可以改善此繁琐的写法，使用注入
         super.openDBConnection();
         Object obj = ORManager.getObject(this.getStatement(), "UserBean", id);
         super.closeDBConnection();

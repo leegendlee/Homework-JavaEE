@@ -39,8 +39,14 @@ public class ORMappingInitiator {
 
                 if (elementName != null) {
                     String valueName = property.element("name").getTextTrim();
-                    if (!valueName.isEmpty() && valueName.equals(propertyName)) {
-                        return valueName;
+                    if (valueName.equals(propertyName)) {
+                        Element elementValue = property.element("value");
+
+                        if (elementValue != null) {
+                            String value = property.element("value").getTextTrim();
+                            if (!value.isEmpty())
+                                return value;
+                        }
                     }
                 }
             }
@@ -62,7 +68,8 @@ public class ORMappingInitiator {
     }
 
     private void setDbPassword(String dbPassword) {
-        DB_PASSWORD = dbPassword == null ? "" : this.parseORMappingXmlRoot(dbPassword);
+        String passWord = this.parseORMappingXmlRoot(dbPassword);
+        DB_PASSWORD = passWord == null ? "" : passWord;
     }
 
     public static String getDriverClass() {

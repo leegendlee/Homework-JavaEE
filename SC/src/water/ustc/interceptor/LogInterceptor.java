@@ -17,20 +17,15 @@ import java.util.Date;
 /**
  * Created by leegend on 2017/12/4.
  */
-public class LogInterceptor implements InterfaceInterceptor {
+public class LogInterceptor extends BaseInterceptor {
     private Element actionLog;
     private Document documentLog;
 
-    private Element action = null;
     private HttpServletRequest req;
 
     @Override
-    public void init(HttpServletRequest req, Object... obj) {
+    public void init(HttpServletRequest req) {
         try {
-            if (obj.length != 0) {
-                this.action = (Element) (obj[0]);
-            }
-
             if (this.action == null) {
                 throw new Exception("Null Action");
             }
@@ -58,7 +53,7 @@ public class LogInterceptor implements InterfaceInterceptor {
     }
 
     @Override
-    public void finish(HttpServletRequest req, Object... obj) {
+    public void finish(HttpServletRequest req) {
         try {
             this.write();
         } catch (Exception e) {
@@ -87,10 +82,10 @@ public class LogInterceptor implements InterfaceInterceptor {
         return true;
     }
 
-    public void afterAction(String methodResult) throws IOException {
+    public void afterAction() throws IOException {
         this.actionLog.element("e-time").setText(this.calcCurrTime());
-        if (methodResult != null) {
-            this.actionLog.element("result").setText(methodResult);
+        if (this.actionResult != null) {
+            this.actionLog.element("result").setText(actionResult);
         }
     }
 }

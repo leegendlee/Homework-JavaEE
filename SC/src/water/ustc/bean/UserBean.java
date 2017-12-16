@@ -11,9 +11,9 @@ import java.util.Objects;
  * Created by leegend on 2017/12/5.
  */
 public class UserBean {
-    public int id;
-    protected String userName;
-    protected String userPass;
+    private String userId;
+    private String userName;
+    private String userPass;
 
     //构造函数参数个数问题
     public UserBean() {
@@ -21,8 +21,8 @@ public class UserBean {
     }
 
     public boolean signIn(String userName, String userPass) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException, DocumentException, NoSuchMethodException, InvocationTargetException {
-        UserDAO userDAO = new UserDAO(userName, userPass);
-        UserBean returnUser = (UserBean) userDAO.query();
+        UserDAO userDAO = new UserDAO();
+        UserBean returnUser = (UserBean) userDAO.query(1);
         if (returnUser != null) {
             if (Objects.equals(returnUser.getUserPass(), userPass)) {
                 return true;
@@ -32,19 +32,27 @@ public class UserBean {
         return false;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public String getUserId() {
+        return this.userId;
     }
 
-    public void setUserPass(String userPass) {
-        this.userPass = userPass;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getUserName() {
         return this.userName;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public String getUserPass() {
         return this.userPass;
+    }
+
+    public void setUserPass(String userPass) {
+        this.userPass = userPass;
     }
 }

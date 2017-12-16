@@ -39,22 +39,18 @@ public class ProxyInterceptor implements MethodInterceptor {
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         if (!this.interceptors.isEmpty()) {
             for (Element interceptor : this.interceptors) {
-
-//
-
                 if (!interceptor.attributeValue("name").isEmpty()) {
                     Class interceptorClass = Class.forName(interceptor.attributeValue("class"));
                     Object interceptorObj = interceptorClass.newInstance();
 
-                    Method initInterceptor = interceptorClass.getMethod("init", Element.class, HttpServletRequest.class);
-                    initInterceptor.invoke(interceptorObj, this.action, this.req);
-
+                    Method initInterceptor = interceptorClass.getMethod("init", HttpServletRequest.class);
+                    initInterceptor.invoke(interceptorObj, this.req);
                     if (!interceptor.attributeValue("predo").isEmpty()) {
                         Method targetInterceptorMethod = interceptorClass.getMethod(interceptor.attributeValue("predo"));
 
                         Boolean interceptorResultPre = (Boolean) targetInterceptorMethod.invoke(interceptorObj);
                         if (!interceptorResultPre) {
-                            Method writeInterceptor = interceptorClass.getMethod("write");
+                            Method writeInterceptor = interceptorClass.getMethod("finish");
                             writeInterceptor.invoke(interceptorObj);
 
                             return null;
@@ -76,8 +72,8 @@ public class ProxyInterceptor implements MethodInterceptor {
                     Object interceptorObj = (Object) entry.getValue();
 
                     Class interceptorClass = Class.forName(interceptorObj.getClass().getName());
-                    Method targetInterceptorMethod = interceptorClass.getMethod(key, String.class);
-                    targetInterceptorMethod.invoke(interceptorObj, actionResult);
+                    Method targetInterceptorMethod = interceptorClass.getMethod(key);
+                    targetInterceptorMethod.invoke(interceptorObj);
 
                     Method writeInterceptor = interceptorClass.getMethod("finish");
                     writeInterceptor.invoke(interceptorObj);
