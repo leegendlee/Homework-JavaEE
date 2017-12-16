@@ -1,15 +1,12 @@
 package water.ustc.initiator;
 
 import org.dom4j.Element;
-import water.ustc.bean.UserBean;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

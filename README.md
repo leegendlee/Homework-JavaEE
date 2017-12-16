@@ -1,1 +1,1 @@
-第一次上传
+本框架基于JavaEE7次作业，目前准备整合基于python api的tensorflow与其他功能的系统。
