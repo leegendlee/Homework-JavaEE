@@ -1,6 +1,0 @@
-<sc-di>
-    <bean name="user" class="water.ustc.bean.UserBean"></bean>
-    <di-mapping>
-        <field name="Login" class="water.ustc.action.LoginAction" bean-name="userBean" bean-ref="user"></field>
-    </di-mapping>
-</sc-di>

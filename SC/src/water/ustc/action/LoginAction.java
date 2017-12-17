@@ -2,7 +2,6 @@ package water.ustc.action;
 
 import org.dom4j.DocumentException;
 import water.ustc.bean.UserBean;
-
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
@@ -17,11 +16,11 @@ public class LoginAction {
     private UserBean userBean;
 
     public String login(HttpServletRequest req) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException, DocumentException, NoSuchMethodException, InvocationTargetException {
-        String userName = (req.getParameter("userName") != null) ? req.getParameter("userName") : "";
-        String userPass = (req.getParameter("userPass") != null) ? req.getParameter("userPass") : "";
+        String userName = req.getParameter("userName") != null ? req.getParameter("userName") : "";
+        String userPass = req.getParameter("userPass") != null ? req.getParameter("userPass") : "";
         //将signIn写成静态
-        UserBean userBean = new UserBean();
-        if (userBean.signIn(userName, userPass)) {
+//        UserBean userBean = new UserBean();
+        if (this.userBean.signIn(userName, userPass)) {
             return SUCCESS;
         }
 

@@ -22,6 +22,7 @@ public abstract class BaseDAO {
 
         try {
             Class.forName(this.driver).newInstance();
+            //效率不高，考虑使用连接池
             conn = DriverManager.getConnection(this.url, ORMappingInitiator.getDbUsername(), ORMappingInitiator.getDbPassword());
         } catch (Exception e) {
             e.printStackTrace();

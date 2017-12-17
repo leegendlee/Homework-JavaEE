@@ -4,8 +4,6 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,31 +34,31 @@ public class BaseAction {
         Object targetActionObj = targetActionClass.newInstance();
 
         //根据di.xml查找DI
-//        File diXml = new File(req.getServletContext().getRealPath("/WEB-INF/classes/di.xml"));
-//        Document diDocument = (new SAXReader()).read(diXml);
-//        Element diRootElement = diDocument.getRootElement();
-//
-//        List<Element> diBeans = diRootElement.elements("bean");
-//        List<Element> diMappings = diRootElement.element("di-mapping").elements("field");
-//
-//        for (Element field : diMappings) {
-//            if (Objects.equals(field.attributeValue("name"), action.attributeValue("name"))) {
-//                for (Element diBean : diBeans) {
-//                    if (Objects.equals(diBean.attributeValue("name"), field.attributeValue("bean-ref"))) {
-//                        Object beanRef = (Class.forName(diBean.attributeValue("class"))).newInstance();
-//
-//                        BeanInfo actionBI = Introspector.getBeanInfo(targetActionObj.getClass(), Object.class);
-//                        PropertyDescriptor[] actionProps = actionBI.getPropertyDescriptors();
-//                        for (PropertyDescriptor actionProp : actionProps) {
-//                            if (Objects.equals(actionProp.getName(), field.attributeValue("bean-name"))) {
-//                                //action
-//                                actionProp.getWriteMethod().invoke(targetActionObj, beanRef);
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        File diXml = new File(req.getServletContext().getRealPath("/WEB-INF/classes/di.xml"));
+        Document diDocument = (new SAXReader()).read(diXml);
+        Element diRootElement = diDocument.getRootElement();
+
+        List<Element> diBeans = diRootElement.elements("bean");
+        List<Element> diMappings = diRootElement.element("di-mapping").elements("field");
+
+        for (Element field : diMappings) {
+            if (Objects.equals(field.attributeValue("name"), action.attributeValue("name"))) {
+                for (Element diBean : diBeans) {
+                    if (Objects.equals(diBean.attributeValue("name"), field.attributeValue("bean-ref"))) {
+                        Object beanRef = (Class.forName(diBean.attributeValue("class"))).newInstance();
+
+                        BeanInfo actionBI = Introspector.getBeanInfo(targetActionObj.getClass(), Object.class);
+                        PropertyDescriptor[] actionProps = actionBI.getPropertyDescriptors();
+                        for (PropertyDescriptor actionProp : actionProps) {
+                            if (Objects.equals(actionProp.getName(), field.attributeValue("bean-name"))) {
+                                //action
+                                actionProp.getWriteMethod().invoke(targetActionObj, beanRef);
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         //没有找到DI，则进行action的转发
         //action

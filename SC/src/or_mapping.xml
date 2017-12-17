@@ -45,6 +45,12 @@
         <table>roles</table>
         <id>roleId</id>
         <property>
+            <name>roleId</name>
+            <column>id</column>
+            <type>int</type>
+            <lazy>false</lazy>
+        </property>
+        <property>
             <name>roleName</name>
             <column>role_name</column>
             <type>String</type>

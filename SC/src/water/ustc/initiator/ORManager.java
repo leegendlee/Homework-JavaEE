@@ -5,6 +5,7 @@ import org.dom4j.Element;
 import java.beans.BeanInfo;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
+import java.lang.reflect.Method;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
@@ -31,7 +32,8 @@ public class ORManager {
                             ResultSet result = statement.executeQuery("SELECT * FROM " + classTable.getTextTrim() +
                                     " WHERE id=" + id);
                             if (result.first()) {
-                                Object returnObj = (Class.forName(BEAN_PATH + textClassName)).newInstance();
+                                Class returnClass = Class.forName(BEAN_PATH + textClassName);
+                                Object returnObj = returnClass.newInstance();
                                 BeanInfo objBI = Introspector.getBeanInfo(returnObj.getClass(), Object.class);
                                 PropertyDescriptor[] objPropsRaw = objBI.getPropertyDescriptors();
 
@@ -40,21 +42,31 @@ public class ORManager {
                                     objProps.put(objProp.getName(), objProp);
                                 }
 
+                                List<String> lazyloads = new ArrayList<String>();
+
                                 List<Element> classProperties = orClass.elements("property");
                                 for (Element prop : classProperties) {
                                     Element name = prop.element("name");
                                     Element column = prop.element("column");
+                                    Element type = prop.element("type");
+                                    Element lazy = prop.element("lazy");
 
                                     if (name != null && column != null) {
                                         String valueName = name.getTextTrim();
                                         String valueColumn = result.getString(column.getTextTrim());
                                         if (objProps.containsKey(valueName) && (valueColumn != null)) {
-                                            //数据类型、懒加载
-                                            objProps.get(valueName).getWriteMethod().invoke(returnObj, valueColumn);
+                                            //数据类型
+                                            if (lazy != null && Objects.equals(lazy.getTextTrim(), "true")) {
+                                                lazyloads.add(valueName);
+                                            } else {
+                                                objProps.get(valueName).getWriteMethod().invoke(returnObj, valueColumn);
+                                            }
                                         }
                                     }
                                 }
 
+                                Method lazyLoad = returnClass.getMethod("lazyLoad", List.class);
+                                lazyLoad.invoke(returnObj, lazyloads);
                                 return returnObj;
                             }
                         } catch (Exception e) {
