@@ -22,11 +22,13 @@ public class BaseInterceptor implements InterfaceInterceptor {
 
     }
 
+    @Override
     public void setAction(Element action) {
         this.action = action;
     }
 
-    public void setActionResult() {
+    @Override
+    public void setActionResult(String actionResult) {
         this.actionResult = actionResult;
     }
 }

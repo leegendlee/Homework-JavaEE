@@ -43,21 +43,26 @@ public class ProxyInterceptor implements MethodInterceptor {
                     Class interceptorClass = Class.forName(interceptor.attributeValue("class"));
                     Object interceptorObj = interceptorClass.newInstance();
 
-                    Method initInterceptor = interceptorClass.getMethod("init", HttpServletRequest.class);
-                    initInterceptor.invoke(interceptorObj, this.req);
+                    Method setAction = interceptorClass.getMethod("setAction", Element.class);
+                    setAction.invoke(interceptorObj, this.action);
+
+                    Method init = interceptorClass.getMethod("init", HttpServletRequest.class);
+                    init.invoke(interceptorObj, this.req);
+
                     if (!interceptor.attributeValue("predo").isEmpty()) {
                         Method targetInterceptorMethod = interceptorClass.getMethod(interceptor.attributeValue("predo"));
 
                         Boolean interceptorResultPre = (Boolean) targetInterceptorMethod.invoke(interceptorObj);
                         if (!interceptorResultPre) {
-                            Method writeInterceptor = interceptorClass.getMethod("finish");
-                            writeInterceptor.invoke(interceptorObj);
+                            Method writeInterceptor = interceptorClass.getMethod("finish", HttpServletRequest.class);
+                            writeInterceptor.invoke(interceptorObj, this.req);
 
                             return null;
                         }
 
-                        if (!interceptor.attributeValue("afterdo").isEmpty()) {
-                            queueInterceptors.put(interceptor.attributeValue(interceptor.attributeValue("afterdo")), interceptorObj);
+                        if (interceptor.attributeValue("afterdo") != null
+                                && !interceptor.attributeValue("afterdo").isEmpty()) {
+                            queueInterceptors.put(interceptor.attributeValue("afterdo"), interceptorObj);
                         }
                     }
                 }
@@ -65,18 +70,21 @@ public class ProxyInterceptor implements MethodInterceptor {
 
             String actionResult = (String) methodProxy.invokeSuper(o, objects);
 
+            //result需要写入
             if (!this.queueInterceptors.isEmpty()) {
-                for (Iterator i = this.queueInterceptors.entrySet().iterator(); i.hasNext(); ) {
-                    Map.Entry entry = (Map.Entry) i.next();
-                    String key = (String) entry.getKey();
-                    Object interceptorObj = (Object) entry.getValue();
+                for (Map.Entry<String, Object> stringObjectEntry : this.queueInterceptors.entrySet()) {
+                    String key = (String) stringObjectEntry.getKey();
+                    Object interceptorObj = (Object) stringObjectEntry.getValue();
 
                     Class interceptorClass = Class.forName(interceptorObj.getClass().getName());
+                    Method setActionResult = interceptorClass.getMethod("setActionResult", String.class);
+                    setActionResult.invoke(interceptorObj, actionResult);
+
                     Method targetInterceptorMethod = interceptorClass.getMethod(key);
                     targetInterceptorMethod.invoke(interceptorObj);
 
-                    Method writeInterceptor = interceptorClass.getMethod("finish");
-                    writeInterceptor.invoke(interceptorObj);
+                    Method writeInterceptor = interceptorClass.getMethod("finish", HttpServletRequest.class);
+                    writeInterceptor.invoke(interceptorObj, this.req);
 
                     this.queueInterceptors.remove(key);
                 }

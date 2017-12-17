@@ -92,13 +92,13 @@ public class SimpleController extends HttpServlet {
                 action = elementAction;
                 proxyInterceptor = new ProxyInterceptor(action, req);
 
-//                for (Element interceptorRef : action.elements("interceptor-ref")) {
-//                    for (Element interceptor : rootController.elements("interceptor")) {
-//                        if (interceptorRef.attributeValue("name").equals(interceptor.attributeValue("name"))) {
-//                            proxyInterceptor.addInterceptors(interceptor);
-//                        }
-//                    }
-//                }
+                for (Element interceptorRef : action.elements("interceptor-ref")) {
+                    for (Element interceptor : rootController.elements("interceptor")) {
+                        if (interceptorRef.attributeValue("name").equals(interceptor.attributeValue("name"))) {
+                            proxyInterceptor.addInterceptors(interceptor);
+                        }
+                    }
+                }
 
                 identify = true;
                 break;

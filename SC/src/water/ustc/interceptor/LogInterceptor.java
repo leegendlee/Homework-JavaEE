@@ -62,6 +62,7 @@ public class LogInterceptor extends BaseInterceptor {
     }
 
     private void write() throws IOException {
+        //可以把xml写入的格式美化一下
         FileWriter fileWriter = new FileWriter(this.req.getServletContext().getRealPath("/WEB-INF/log.xml"));
         XMLWriter xmlWriter = new XMLWriter(fileWriter);
         xmlWriter.write(this.documentLog);
