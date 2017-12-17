@@ -12,6 +12,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/../dom4j-2.1.0.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../mysql-connector-java-5.1.45-bin.jar" />
           <element id="library" level="project" name="SimpleController" />
+          <element id="library" level="project" name="commons-lang3-3.7" />
         </element>
       </element>
     </root>

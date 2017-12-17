@@ -1,1 +1,1 @@
-本框架基于JavaEE7次作业，目前准备整合基于python api的tensorflow与其他功能的系统。
+本框架基于JavaEE7次作业，目前准备整合基于python api的tensorflow与其他功能的系统，web部分预计使用angularJS，后端拟使用restful json-rpc。

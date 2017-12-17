@@ -14,33 +14,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.transform.*;
-
 import org.dom4j.*;
-import org.dom4j.io.SAXReader;
-
-import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Objects;
 import java.util.regex.Pattern;
-
 import water.ustc.initiator.BaseInitiator;
 import water.ustc.interceptor.ProxyInterceptor;
 
 public class SimpleController extends HttpServlet {
-    public static String basePath = "";
     public static Element action = null;
     public static ProxyInterceptor proxyInterceptor = null;
     public static String uri = "";
     public static Map<String, String> params = new HashMap<String, String>();
 
     public SimpleController() {
-    }
-
-    private void initAttrs(HttpServletRequest req) {
-        basePath = req.getServletContext().getRealPath("/");
     }
 
     @Override
@@ -69,10 +59,6 @@ public class SimpleController extends HttpServlet {
             HttpServletResponse response = (HttpServletResponse) res;
 
             uri = request.getRequestURI();
-
-            if (basePath.isEmpty()) {
-                this.initAttrs(request);
-            }
 
             if (params.isEmpty()) {
 //                params = request.getParameterMap();

@@ -21,14 +21,20 @@ public class UserBean {
     }
 
     public boolean signIn(String userName, String userPass) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException, DocumentException, NoSuchMethodException, InvocationTargetException {
+//        UserDAO userDAO = new UserDAO();
+//        UserBean returnUser = (UserBean) userDAO.query(2);
+//        if (returnUser != null) {
+//            if (Objects.equals(returnUser.getUserPass(), userPass)) {
+//                return true;
+//            }
+//        }
         UserDAO userDAO = new UserDAO();
-        UserBean returnUser = (UserBean) userDAO.query(1);
-        if (returnUser != null) {
-            if (Objects.equals(returnUser.getUserPass(), userPass)) {
-                return true;
-            }
-        }
+        UserBean userBean = new UserBean();
+        userBean.setUserName("lee");
+        userBean.setUserPass("123456");
+        boolean insert = userDAO.insert(userBean);
 
+        System.out.println(insert);
         return false;
     }
 
