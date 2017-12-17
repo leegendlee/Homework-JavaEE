@@ -1,7 +1,6 @@
 package water.ustc.dao;
 
 import water.ustc.initiator.ORMappingInitiator;
-
 import java.sql.*;
 
 /**

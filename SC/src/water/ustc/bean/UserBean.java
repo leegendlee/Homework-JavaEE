@@ -2,7 +2,6 @@ package water.ustc.bean;
 
 import org.dom4j.DocumentException;
 import water.ustc.dao.UserDAO;
-
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 import java.util.Objects;
@@ -21,20 +20,15 @@ public class UserBean {
     }
 
     public boolean signIn(String userName, String userPass) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException, DocumentException, NoSuchMethodException, InvocationTargetException {
-//        UserDAO userDAO = new UserDAO();
-//        UserBean returnUser = (UserBean) userDAO.query(2);
-//        if (returnUser != null) {
-//            if (Objects.equals(returnUser.getUserPass(), userPass)) {
-//                return true;
-//            }
-//        }
         UserDAO userDAO = new UserDAO();
-        UserBean userBean = new UserBean();
-        userBean.setUserName("lee");
-        userBean.setUserPass("123456");
-        boolean insert = userDAO.insert(userBean);
+        //需要添加一个根据字段组合查找的方法
+        UserBean returnUser = (UserBean) userDAO.query(1);
+        if (returnUser != null) {
+            if (Objects.equals(returnUser.getUserPass(), userPass)) {
+                return true;
+            }
+        }
 
-        System.out.println(insert);
         return false;
     }
 

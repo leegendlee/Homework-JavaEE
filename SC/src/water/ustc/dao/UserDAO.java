@@ -1,8 +1,6 @@
 package water.ustc.dao;
 
-import water.ustc.bean.UserBean;
 import water.ustc.initiator.ORManager;
-
 import java.sql.SQLException;
 
 /**

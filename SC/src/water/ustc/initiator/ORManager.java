@@ -128,11 +128,117 @@ public class ORManager {
         return false;
     }
 
-    public static boolean updateObject(Statement statement, String classNameArg, Object object) {
+    public static boolean updateObject(Statement statement, String classNameArg, Object obj) {
+        //需要保持数据一致性，取数据时将原始数据保存在缓存区
+        if (obj != null) {
+            try {
+                BeanInfo objBI = Introspector.getBeanInfo(obj.getClass(), Object.class);
+                PropertyDescriptor[] objPropsRaw = objBI.getPropertyDescriptors();
+
+                for (Element orClass : CLASSES) {
+                    Element className = orClass.element("name");
+                    Element classTable = orClass.element("table");
+                    if (className != null && classTable != null) {
+                        String textClassName = className.getTextTrim();
+
+                        if (textClassName.equals(obj.getClass().getSimpleName())) {
+                            Object objRaw = new Object();
+                            int id = 0;
+
+                            Map<String, PropertyDescriptor> objProps = new HashMap<String, PropertyDescriptor>();
+                            for (PropertyDescriptor objProp : objPropsRaw) {
+                                String propName = objProp.getName();
+                                //效率问题
+                                if (orClass.element("id") != null && propName.equals(orClass.element("id").getTextTrim())) {
+                                    //数据类型
+                                    id = Integer.parseInt((String) objProp.getReadMethod().invoke(obj));
+                                    objRaw = getObject(statement, classNameArg, id);
+                                    if (objRaw == null) {
+                                        return false;
+                                    }
+                                }
+
+                                objProps.put(objProp.getName(), objProp);
+                            }
+
+                            //更好的做法是先检测原始数据和新数据是否相等，不相等时再进行更新，并且相同的数据不更新，麻烦。。
+
+                            List<String> updateKeyValues = new ArrayList<String>();
+
+                            List<Element> classProperties = orClass.elements("property");
+                            for (Element prop : classProperties) {
+                                Element name = prop.element("name");
+                                Element column = prop.element("column");
+
+                                if (name != null && column != null) {
+                                    if (orClass.element("id") != null
+                                            && Objects.equals(name.getTextTrim(), orClass.element("id").getTextTrim())) {
+                                        continue;
+                                    }
+
+                                    String valueName = name.getTextTrim();
+                                    if (objProps.containsKey(valueName)) {
+                                        updateKeyValues.add(column.getTextTrim() + "='"
+                                                + (String) objProps.get(valueName).getReadMethod().invoke(obj) + "'");
+                                    }
+                                }
+                            }
+
+                            int result = statement.executeUpdate("UPDATE " + classTable.getTextTrim()
+                                    + " SET " + StringUtils.join(updateKeyValues.toArray(), ",") + " WHERE id=" + id);
+                            return result != 0;
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         return false;
     }
 
-    public static boolean deleteObject(Statement statement, String classNameArg, Object object) {
+    //通过主键删？卧艹没自己写过ORM，好方啊。。。
+    public static boolean deleteObject(Statement statement, String classNameArg, Object obj) {
+        if (obj != null) {
+            try {
+                BeanInfo objBI = Introspector.getBeanInfo(obj.getClass(), Object.class);
+                PropertyDescriptor[] objPropsRaw = objBI.getPropertyDescriptors();
+
+                for (Element orClass : CLASSES) {
+                    Element className = orClass.element("name");
+                    Element classTable = orClass.element("table");
+                    if (className != null && classTable != null) {
+                        String textClassName = className.getTextTrim();
+
+                        if (textClassName.equals(obj.getClass().getSimpleName())) {
+                            Object objRaw = new Object();
+                            int id = 0;
+
+                            Map<String, PropertyDescriptor> objProps = new HashMap<String, PropertyDescriptor>();
+                            for (PropertyDescriptor objProp : objPropsRaw) {
+                                String propName = objProp.getName();
+                                //效率问题
+                                if (orClass.element("id") != null && propName.equals(orClass.element("id").getTextTrim())) {
+                                    //数据类型
+                                    id = Integer.parseInt((String) objProp.getReadMethod().invoke(obj));
+                                    objRaw = getObject(statement, classNameArg, id);
+                                    if (objRaw == null) {
+                                        return false;
+                                    }
+                                }
+                            }
+
+                            //更好的做法是先检测原始数据和新数据是否相等，不相等时再进行更新，并且相同的数据不更新，麻烦。。
+                            int result = statement.executeUpdate("DELETE FROM " + classTable.getTextTrim()
+                                    + " WHERE id=" + id);
+                            return result != 0;
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         return false;
     }
 }
