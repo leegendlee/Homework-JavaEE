@@ -23,6 +23,8 @@ public abstract class BaseBean implements Dispatcher {
                 for (PropertyDescriptor thisProp : thisProps) {
                     if (props.containsKey(thisProp.getName())) {
                         //会有nullPointer的错误
+                        //Q：如何对非集合、非对象的属性进行延迟加载
+                        //Q：如何不使用动态类编写通用的适应所有Bean的延迟加载方法
                         thisProp.getWriteMethod().invoke(this, String.valueOf(this.lazyLoadDispatcher(props.get(thisProp.getName()))));
                     }
                 }
