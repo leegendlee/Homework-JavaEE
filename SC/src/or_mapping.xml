@@ -25,13 +25,13 @@
             <name>userId</name>
             <column>id</column>
             <type>int</type>
-            <lazy>false</lazy>
+            <lazy>true</lazy>
         </property>
         <property>
             <name>userName</name>
             <column>user_name</column>
             <type>String</type>
-            <lazy>false</lazy>
+            <lazy>true</lazy>
         </property>
         <property>
             <name>userPass</name>

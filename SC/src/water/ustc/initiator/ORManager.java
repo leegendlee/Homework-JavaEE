@@ -42,7 +42,7 @@ public class ORManager {
                                     objProps.put(objProp.getName(), objProp);
                                 }
 
-                                List<String> lazyloads = new ArrayList<String>();
+                                Map<String, Object> lazyLoads = new HashMap<String, Object>();
 
                                 List<Element> classProperties = orClass.elements("property");
                                 for (Element prop : classProperties) {
@@ -57,7 +57,7 @@ public class ORManager {
                                         if (objProps.containsKey(valueName) && (valueColumn != null)) {
                                             //数据类型
                                             if (lazy != null && Objects.equals(lazy.getTextTrim(), "true")) {
-                                                lazyloads.add(valueName);
+                                                lazyLoads.put(valueName, valueColumn);
                                             } else {
                                                 objProps.get(valueName).getWriteMethod().invoke(returnObj, valueColumn);
                                             }
@@ -65,8 +65,8 @@ public class ORManager {
                                     }
                                 }
 
-                                Method lazyLoad = returnClass.getMethod("lazyLoad", List.class);
-                                lazyLoad.invoke(returnObj, lazyloads);
+                                Method lazyLoad = returnClass.getMethod("lazyLoad", Map.class);
+                                lazyLoad.invoke(returnObj, lazyLoads);
                                 return returnObj;
                             }
                         } catch (Exception e) {
