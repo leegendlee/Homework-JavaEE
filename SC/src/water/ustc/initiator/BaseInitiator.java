@@ -4,14 +4,10 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
-
-import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import java.io.File;
-import java.util.Set;
 
 /**
  * Created by leegend on 2017/12/15.

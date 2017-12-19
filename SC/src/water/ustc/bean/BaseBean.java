@@ -3,7 +3,6 @@ package water.ustc.bean;
 import net.sf.cglib.proxy.Callback;
 import net.sf.cglib.proxy.Dispatcher;
 import net.sf.cglib.proxy.Enhancer;
-
 import java.beans.BeanInfo;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;

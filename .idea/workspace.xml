@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05648bb0-562f-45b6-897a-5a1181ea3d3a" name="Default" comment="[Leegend]延迟加载(尚未解决)">
+    <list default="true" id="05648bb0-562f-45b6-897a-5a1181ea3d3a" name="Default" comment="[Leegend]初步框架结构打成jar包">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SC/lib/simple-controller.jar" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SimpleController.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SC/lib/SimpleController.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SC/lib/mysql-connector-java-5.1.45-bin.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SC/web/pages/success_view.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SC/water/ustc/action/BaseAction.class" afterPath="$PROJECT_DIR$/out/production/SC/water/ustc/action/BaseAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/SC_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/SC_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/SC.iml" afterPath="$PROJECT_DIR$/SC/SC.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/action/BaseAction.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/action/BaseAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/bean/BaseBean.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/bean/BaseBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/filter/BaseFilter.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/filter/BaseFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/initiator/ORManager.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/initiator/ORManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/initiator/ORMappingInitiator.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/initiator/ORMappingInitiator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/interceptor/ProxyInterceptor.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/interceptor/ProxyInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SC/src/water/ustc/interfaces/InterfaceInterceptor.java" afterPath="$PROJECT_DIR$/SC/src/water/ustc/interfaces/InterfaceInterceptor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -29,65 +46,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="UserBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/UserBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1058#1059#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseBean.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/BaseBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ORManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/ORManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1800#1828#0" expanded="true" />
-                <element signature="e#2101#2117#0" expanded="true" />
-                <element signature="method#insertObject#0;class#ORManager#0" expanded="false" />
-                <element signature="e#4403#4431#0" expanded="true" />
-                <element signature="e#5145#5153#0" expanded="true" />
-                <element signature="e#5226#5234#0" expanded="true" />
-                <element signature="method#updateObject#0;class#ORManager#0" expanded="false" />
-                <element signature="e#7846#7874#0" expanded="true" />
-                <element signature="e#8862#8870#0" expanded="true" />
-                <element signature="method#deleteObject#0;class#ORManager#0" expanded="false" />
-                <element signature="e#11377#11405#0" expanded="true" />
-                <marker date="1513576997146" expanded="true" signature="1180:1272" ph="SELECT * FRO... missingValue" />
-                <marker date="1513576997146" expanded="true" signature="6351:6594" ph="INSERT INTO missingValue... " />
-                <marker date="1513576997146" expanded="true" signature="10052:10059" ph="UPDATE missi... " />
-                <marker date="1513576997146" expanded="true" signature="10052:10131" ph="UPDATE missi... " />
-                <marker date="1513576997146" expanded="true" signature="10052:10132" ph="UPDATE missi... " />
-                <marker date="1513576997146" expanded="true" signature="10052:10194" ph="UPDATE missi... " />
-                <marker date="1513576997146" expanded="true" signature="10052:10198" ph="UPDATE missi... " />
-                <marker date="1513576997146" expanded="true" signature="12311:12401" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -429,7 +388,6 @@
         <option value="$PROJECT_DIR$/SC/src/water/ustc/interceptor/InterceptorProxy.java" />
         <option value="$PROJECT_DIR$/SC/web/index.jsp" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/action/InterfaceAction.java" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/filter/BaseFilter.java" />
         <option value="$PROJECT_DIR$/SC/web/pages/login.jsp" />
         <option value="$PROJECT_DIR$/SC/src/controller.xml" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/bean/ConstantBean.java" />
@@ -439,28 +397,29 @@
         <option value="$PROJECT_DIR$/SC/src/water/ustc/dao/Conversation.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/listener/BaseListener.java" />
         <option value="$PROJECT_DIR$/SC/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/initiator/ORMappingInitiator.java" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/interceptor/LogInterceptor.java" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/interfaces/InterfaceInterceptor.java" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/interceptor/ProxyInterceptor.java" />
         <option value="$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/log.xml" />
         <option value="$PROJECT_DIR$/SC/src/di.xml" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/action/BaseAction.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/action/LoginAction.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/bean/LazyLoaderDispatcher.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/bean/LazyLoaderBean.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/interceptor/BaseInterceptor.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/bean/RoleBean.java" />
         <option value="$PROJECT_DIR$/SC/src/or_mapping.xml" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/bean/LazyLoadDispatcher.java" />
-        <option value="$PROJECT_DIR$/SC/src/water/ustc/initiator/ORManager.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/bean/UserBean.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/action/BaseAction.java" />
         <option value="$PROJECT_DIR$/SC/src/water/ustc/bean/BaseBean.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/filter/BaseFilter.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/initiator/ORManager.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/initiator/ORMappingInitiator.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/interfaces/InterfaceInterceptor.java" />
+        <option value="$PROJECT_DIR$/SC/src/water/ustc/interceptor/ProxyInterceptor.java" />
       </list>
     </option>
   </component>
@@ -523,9 +482,19 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="UseSC" />
@@ -536,19 +505,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UseSC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="ORm&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/initiator/ORManager.java&#10;OR&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/initiator/ORManager.java&#10;or_&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/or_mapping.xml&#10;Proxy&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/ProxyInterceptor.java&#10;ORM&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/initiator/ORManager.java&#10;BaseB&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/BaseBean.java&#10;UserB&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/UserBean.java&#10;or_m&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/or_mapping.xml&#10;Loga&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;or_,&#9;null&#9;null&#10;uSER&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/UserBean.java&#10;BaseD&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/BaseDAO.java&#10;Simplec&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;di&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/di.xml&#10;BaseA&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;B&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;Log&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;con&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;LogA&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;Basea&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;or_ma&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/or_mapping.xml&#10;log.x&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/log.xml&#10;Inter&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/ProxyInterceptor.java&#10;Sim&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;UserD&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/UserDAO.java&#10;User&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/UserBean.java&#10;BaseDAO&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/BaseDAO.java&#10;or&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/or_mapping.xml&#10;BaseI&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/initiator/BaseInitiator.java&#10;Simple&#9;FILE&#9;jar:///Users/leegend/Downloads/SimpleController/out/artifacts/SimpleController/SimpleController.jar!/sc/ustc/controller/SimpleController.class&#10;web&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml&#10;web.x&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml&#10;web.xn&#9;null&#9;null&#10;Con&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/Conversation.java&#10;di.xml&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/di.xml&#10;Confi&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/Configuration.java&#10;Simpl&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;SimpleC&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;Pro&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/ProxyInterceptor.java&#10;log&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/pages/login.jsp&#10;controller&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;web.xml&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml&#10;index&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/index.jsp&#10;S&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;Base&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;BASE&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;HttpS&#9;FILE&#9;jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/http/HttpServletRequest.class&#10;Http&#9;FILE&#9;jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class&#10;inde&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/index.jsp&#10;log.&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/out/artifacts/SC_war_exploded/WEB-INF/log.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Simplec&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;BaseA&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;ORm&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/initiator/ORManager.java&#10;OR&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/initiator/ORManager.java&#10;or_&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/or_mapping.xml&#10;Proxy&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/ProxyInterceptor.java&#10;ORM&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/initiator/ORManager.java&#10;BaseB&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/BaseBean.java&#10;UserB&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/UserBean.java&#10;or_m&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/or_mapping.xml&#10;Loga&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;or_,&#9;null&#9;null&#10;uSER&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/UserBean.java&#10;BaseD&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/BaseDAO.java&#10;di&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/di.xml&#10;B&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;Log&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;con&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;LogA&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/LoginAction.java&#10;Basea&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;or_ma&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/or_mapping.xml&#10;log.x&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/log.xml&#10;Inter&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/ProxyInterceptor.java&#10;Sim&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;UserD&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/UserDAO.java&#10;User&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/bean/UserBean.java&#10;BaseDAO&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/BaseDAO.java&#10;or&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/or_mapping.xml&#10;BaseI&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/initiator/BaseInitiator.java&#10;Simple&#9;FILE&#9;jar:///Users/leegend/Downloads/SimpleController/out/artifacts/SimpleController/SimpleController.jar!/sc/ustc/controller/SimpleController.class&#10;web&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml&#10;web.x&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml&#10;web.xn&#9;null&#9;null&#10;Con&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/Conversation.java&#10;di.xml&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/di.xml&#10;Confi&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/dao/Configuration.java&#10;Simpl&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;SimpleC&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;Pro&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/interceptor/ProxyInterceptor.java&#10;log&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/pages/login.jsp&#10;controller&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/controller.xml&#10;web.xml&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/WEB-INF/web.xml&#10;index&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/index.jsp&#10;S&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/SimpleController.java&#10;Base&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;BASE&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/src/water/ustc/action/BaseAction.java&#10;HttpS&#9;FILE&#9;jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/http/HttpServletRequest.class&#10;Http&#9;FILE&#9;jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class&#10;inde&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/SC/web/index.jsp&#10;log.&#9;FILE&#9;file:///Users/leegend/Downloads/UseSC/out/artifacts/SC_war_exploded/WEB-INF/log.xml" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="FullScreen" value="true" />
   </component>
@@ -1104,7 +1095,8 @@
       <workItem from="1513257626718" duration="2669000" />
       <workItem from="1513305540840" duration="16093000" />
       <workItem from="1513405924065" duration="38589000" />
-      <workItem from="1513565736977" duration="8292000" />
+      <workItem from="1513565736977" duration="8317000" />
+      <workItem from="1513647790277" duration="2199000" />
     </task>
     <task id="LOCAL-00001" summary="[Leegend]First Push">
       <created>1513094058450</created>
@@ -1260,11 +1252,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513577098853</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="[Leegend]延迟加载(尚未解决)">
+      <created>1513578891788</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1513578891788</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184780000" />
+    <option name="totallyTimeSpent" value="187004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1291,9 +1290,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.48869145" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08804523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2552504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1302,6 +1300,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1332,7 +1331,8 @@
     <MESSAGE value="[Leegend]延迟加载基本结构" />
     <MESSAGE value="[Leegend]延迟加载(half)" />
     <MESSAGE value="[Leegend]延迟加载(尚未解决)" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Leegend]延迟加载(尚未解决)" />
+    <MESSAGE value="[Leegend]初步框架结构打成jar包" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Leegend]初步框架结构打成jar包" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1345,56 +1345,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/ConstantBean.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/sql/DriverManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="235" column="29" lean-forward="false" selection-start-line="235" selection-start-column="29" selection-end-line="235" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../SimpleController/out/artifacts/SimpleController/SimpleController.jar!/sc/ustc/interceptor/InterfaceInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/ServletContainerInitializer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaEE/lib/javaee-impl.jar!/standardSchemas/javaee_7.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="1666" column="26" lean-forward="true" selection-start-line="1666" selection-start-column="26" selection-end-line="1666" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/ServletContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../SimpleController/out/artifacts/SimpleController/SimpleController.jar!/org/dom4j/Document.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../SimpleController/out/artifacts/SimpleController/SimpleController.jar!/org/dom4j/DocumentException.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1446,7 +1396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1454,7 +1403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1500,21 +1448,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/artifacts/SC_war_exploded/WEB-INF/log.xml" />
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/interceptor/LogInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="55" column="46" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/ORMappingInitiator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SC/src/controller.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1531,73 +1464,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="true" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/filter/BaseFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/action/BaseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/interfaces/InterfaceInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/RoleBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/LazyLoaderBean.java" />
     <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/LazyLoaderDispatcher.java" />
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/interceptor/BaseInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../SimpleController/out/artifacts/SimpleController/SimpleController.jar!/net/sf/cglib/proxy/Dispatcher.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1613,7 +1492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1628,19 +1506,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/interceptor/ProxyInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../SimpleController/out/artifacts/SimpleController/SimpleController.jar!/net/sf/cglib/proxy/Enhancer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="491" column="25" lean-forward="false" selection-start-line="491" selection-start-column="25" selection-end-line="491" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1652,55 +1521,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/LazyLoadDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/ORManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1800#1828#0" expanded="true" />
-            <element signature="e#2101#2117#0" expanded="true" />
-            <element signature="method#insertObject#0;class#ORManager#0" expanded="false" />
-            <element signature="e#4403#4431#0" expanded="true" />
-            <element signature="e#5145#5153#0" expanded="true" />
-            <element signature="e#5226#5234#0" expanded="true" />
-            <element signature="method#updateObject#0;class#ORManager#0" expanded="false" />
-            <element signature="e#7846#7874#0" expanded="true" />
-            <element signature="e#8862#8870#0" expanded="true" />
-            <element signature="method#deleteObject#0;class#ORManager#0" expanded="false" />
-            <element signature="e#11377#11405#0" expanded="true" />
-            <marker date="1513576997146" expanded="true" signature="1180:1272" ph="SELECT * FRO... missingValue" />
-            <marker date="1513576997146" expanded="true" signature="6351:6594" ph="INSERT INTO missingValue... " />
-            <marker date="1513576997146" expanded="true" signature="10052:10059" ph="UPDATE missi... " />
-            <marker date="1513576997146" expanded="true" signature="10052:10131" ph="UPDATE missi... " />
-            <marker date="1513576997146" expanded="true" signature="10052:10132" ph="UPDATE missi... " />
-            <marker date="1513576997146" expanded="true" signature="10052:10194" ph="UPDATE missi... " />
-            <marker date="1513576997146" expanded="true" signature="10052:10198" ph="UPDATE missi... " />
-            <marker date="1513576997146" expanded="true" signature="12311:12401" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/UserBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/LazyLoadDispatcher.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1709,13 +1530,209 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/UserBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1024#1025#0" expanded="false" />
+            <element signature="e#1058#1059#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/javax/xml/transform/Transformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="105" column="25" lean-forward="false" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/Cellar/tomcat/8.5.20/libexec/lib/servlet-api.jar!/javax/servlet/ServletResponse.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/javax/xml/transform/stream/StreamResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="77" column="11" lean-forward="false" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
+          <folding>
+            <element signature="e#1952#1953#0" expanded="false" />
+            <element signature="e#1985#1986#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/io/StringWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="50" column="19" lean-forward="true" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/web/pages/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/web/pages/success_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/interceptor/LogInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="55" column="46" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/action/BaseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="104" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/bean/BaseBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        <state relative-caret-position="576">
+          <caret line="54" column="1" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/action/SimpleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="124" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/dao/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="79" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/filter/BaseFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="42" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/BaseInitiator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="94" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/ORManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="255" column="1" lean-forward="false" selection-start-line="255" selection-start-column="1" selection-end-line="255" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#insertObject#0;class#ORManager#0" expanded="false" />
+            <element signature="method#updateObject#0;class#ORManager#0" expanded="false" />
+            <element signature="method#deleteObject#0;class#ORManager#0" expanded="false" />
+            <marker date="1513649616249" expanded="true" signature="1180:1272" ph="SELECT * FRO... missingValue" />
+            <marker date="1513649616249" expanded="true" signature="6351:6594" ph="INSERT INTO missingValue... " />
+            <marker date="1513649616249" expanded="true" signature="10052:10059" ph="UPDATE missi... " />
+            <marker date="1513649616249" expanded="true" signature="10052:10131" ph="UPDATE missi... " />
+            <marker date="1513649616249" expanded="true" signature="10052:10132" ph="UPDATE missi... " />
+            <marker date="1513649616249" expanded="true" signature="10052:10194" ph="UPDATE missi... " />
+            <marker date="1513649616249" expanded="true" signature="10052:10198" ph="UPDATE missi... " />
+            <marker date="1513649616249" expanded="true" signature="12311:12401" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/initiator/ORMappingInitiator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="88" column="1" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="88" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/interceptor/BaseInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/interfaces/InterfaceInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SC/src/water/ustc/interceptor/ProxyInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1778,7 +1795,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1786,7 +1802,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>commons-lang3-3.7</last-edited>
+          <last-edited>simple-controller</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

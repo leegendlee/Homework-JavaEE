@@ -4,6 +4,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,9 +15,7 @@ import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Iterator;
@@ -79,11 +78,15 @@ public class BaseAction {
                     Transformer transformer = factory.newTransformer(xslPage);
                     File xmlPage = new File(req.getServletContext().getRealPath(value));
 
-                    File htmlPage = new File(req.getServletContext().getRealPath(prefix + ".html"));
+//                    File htmlPage = new File(req.getServletContext().getRealPath(prefix + ".html"));
                     Source source = new StreamSource(xmlPage);
-                    Result result1 = new StreamResult(htmlPage);
+                    Writer writer = new StringWriter();
+                    Result result1 = new StreamResult(writer);
                     transformer.transform(source, result1);
-                    req.getRequestDispatcher(prefix + ".html").forward(req, res);
+
+                    PrintWriter printWriter = res.getWriter();
+                    printWriter.write(String.valueOf(writer));
+//                    req.getRequestDispatcher(prefix + ".html").forward(req, res);
                 } else {
                     req.getRequestDispatcher(value).forward(req, res);
                 }

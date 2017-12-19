@@ -20,16 +20,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.20" level="application_server_libraries" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../mysql-connector-java-5.1.45-bin.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="SimpleController" level="project" />
-    <orderEntry type="library" name="commons-lang3-3.7" level="project" />
+    <orderEntry type="library" name="simple-controller" level="project" />
   </component>
 </module>

@@ -1,7 +1,6 @@
 package water.ustc.initiator;
 
 import org.dom4j.Element;
-
 import java.util.List;
 
 /**
